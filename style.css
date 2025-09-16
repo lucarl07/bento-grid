@@ -26,11 +26,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
   font-family: 'DM Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -62,7 +66,7 @@ body {
   flex-direction: column;
   padding: 1.25rem;
   overflow: hidden;
-  border: 1px solid red; /* Temporary */
+  border-radius: .5rem;
 }
 
 .wrapper {
@@ -100,6 +104,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+  background-color: var(--purple-500);
+  color: var(--white);
 }
 .grid .item:nth-child(1) .large-text {
   font-size: var(--x-large);
@@ -115,6 +121,7 @@ body {
 .grid .item:nth-child(2) {
   grid-area: cardB;
   justify-content: space-between;
+  background-color: var(--white);
 }
 .grid .item:nth-child(2) img {
   width: 150%;
@@ -124,12 +131,14 @@ body {
   grid-area: cardC;
   padding-bottom: 0;
   gap: 1rem;
+  background-color: var(--yellow-500);
 }
 
 .grid .item:nth-child(4) {
   grid-area: cardD;
   justify-content: center;
   gap: 1rem;
+  background-color: var(--purple-100);
 }
 .grid .item:nth-child(4) img {
   width: 180%;
@@ -140,6 +149,8 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+  background-color: var(--purple-500);
+  color: var(--white);
 }
 .grid .item:nth-child(5) img {
   object-fit: contain;
@@ -152,6 +163,7 @@ body {
 .grid .item:nth-child(6) {
   grid-area: cardF;
   justify-content: space-between;
+  background-color: var(--white);
 }
 .grid .item:nth-child(6) .wrapper {
   gap: 1.25rem;
@@ -167,6 +179,7 @@ body {
   grid-area: cardG;
   justify-content: center;
   gap: 1.25rem;
+  background-color: var(--yellow-100);
 }
 .grid .item:nth-child(7) .large-text {
   font-size: var(--larger);
@@ -175,14 +188,14 @@ body {
 .grid .item:nth-child(8) {
   grid-area: cardH;
   justify-content: space-between;
+  background-color: var(--yellow-500);
 }
 .grid .item:nth-child(8) .large-text {
   font-size: var(--larger);
 }
 
-/* --- Styles below may not be used: --- */
-
 .attribution {
+  padding-bottom: 1rem;
   font-size: 11px;
   text-align: center; 
 }
