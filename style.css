@@ -1,14 +1,38 @@
+:root {
+  /** Colors: **/
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --whitesmoke: hsl(0, 0%, 96%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Font sizes: */
+  --p: 18px;
+}
+
 @font-face {
   font-family: 'DM Sans';
   src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf');
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'DM Sans';
 }
 
+body {
+  background-color: var(--whitesmoke);
+}
+
+/* --- Styles below may not be used: --- */
+
 .attribution {
-  display: none;
   font-size: 11px;
   text-align: center; 
 }
