@@ -1,10 +1,129 @@
+:root {
+  /** Colors: **/
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --whitesmoke: hsl(0, 0%, 96%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Font sizes: */
+  --p: 16px;
+}
+
 @font-face {
   font-family: 'DM Sans';
   src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf');
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'DM Sans';
+}
+
+body {
+  background-color: var(--whitesmoke);
+}
+
+p {
+  font-size: var(--p);
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.bento-grid {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  overflow: hidden;
+
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.container-A {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 500px;
+  height: 280px;
+  
+  font-size: 38px;
+  line-height: 57px;
+  text-align: center;
+  
+  background-color: var(--purple-500);
+  color: var(--white);
+}
+.container-A .wrapper p {
+  line-height: 0px;
+} 
+.container-A .wrapper img {
+  width: 180px;
+}
+
+.container-B {
+  justify-content: space-between;
+
+  max-width: 220px;
+  height: 220px;
+  background-color: var(--white);
+}
+.container-B img {
+  width: 280px;
+}
+.container-B h1 {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.container-C {
+  gap: .75rem;
+  max-width: 220px;
+  height: 220px;
+  background-color: var(--yellow-500);
+}
+.container-C h1 {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.container-F {
+  justify-content: space-between;
+
+  max-width: 220px;
+  height: 220px;
+  background-color: var(--white);
+}
+.container-F hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.container-F h1 {
+  font-size: 56px;
+  line-height: 56px;
+}
+.container-F p {
+  line-height: 0px;
+}
+.container-F img {
+  width: 160px;
 }
 
 .attribution {
