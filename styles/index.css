@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: 'DM Sans';
-  src: url('./assets/fonts/DMSans-VariableFont_opsz,wght.ttf');
+  src: url('../assets/fonts/DMSans-VariableFont_opsz,wght.ttf');
 }
 
 * {
@@ -35,6 +35,7 @@
 body {
   display: flex;
   flex-direction: column;
+  width: 100%;  
   height: 100vh;
   align-items: center;
   justify-content: center;
