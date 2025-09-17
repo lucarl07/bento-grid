@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) {
   .attribution {
-    display: block;
+    display: none;
     padding-bottom: 1rem;
     font-size: .75rem;
     text-align: center; 
