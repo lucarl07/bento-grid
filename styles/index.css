@@ -90,10 +90,6 @@ body {
   color: var(--purple-500);
 }
 
-.oblique {
-  font-style: oblique;
-}
-
 .grid .item:nth-child(1) {
   grid-area: cardA;
   justify-content: center;
