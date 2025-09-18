@@ -96,16 +96,4 @@
       width: 80%;
     }
   }
-
-  /* --- Styles below may be removed --- */
-
-  .attribution {
-    display: none;
-    padding-bottom: 1rem;
-    font-size: .75rem;
-    text-align: center; 
-  }
-  .attribution a { 
-    color: hsl(228, 45%, 44%); 
-  }
 }
