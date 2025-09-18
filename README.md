@@ -27,10 +27,12 @@ Users should be able to:
 ### Screenshot
 
 - On Desktop:
-![Screenshot on desktop resolution](./public/screenshot.jpg)
+
+![Screenshot on desktop resolution](./public/screenshot.png)
 
 - On Mobile:
-![Screenshot on mobile resolution](./public/screenshot-mobile.jpg)
+
+![Screenshot on mobile resolution](./public/screenshot-mobile.png)
 
 ### Links
 
