@@ -1,97 +1,89 @@
-# Frontend Mentor - Bento grid
+# Frontend Mentor - Bento grid solution
 
-![Design preview for the Bento grid coding challenge](./preview.jpg)
+This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a good understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this bento grid and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to: 
+Users should be able to:
 
 - View the optimal layout for the interface depending on their device's screen size
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-### Expected behaviour
+- On Desktop:
+![Screenshot on desktop resolution](./public/screenshot.jpg)
 
-The two components in the left column on desktop are placed at the bottom on mobile. This is a good opportunity to practice your CSS Grid placement skills.
+- On Mobile:
+![Screenshot on mobile resolution](./public/screenshot-mobile.jpg)
 
-## Where to find everything
+### Links
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- [Solution Repo (GitHub)](https://github.com/lucarl07/bento-grid)
+- [Live Site (GitHub Pages)](https://lucarl07.github.io/bento-grid/)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## My process
 
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Built with
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+- **HTML 5** (with semantic markup)
+- **CSS 3** (with CSS grid, global variables, @media queries, etc.)
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### What I learned
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+I started this project feeling rather stuck and without knowing how to progress. This feeling was due to my initial insistence on using flexbox display, with led to my HTML file being littered with divs (div hell, *per se*?). After realizing how inefficient this approach would be, and me knowing it would be horrible to determine, one by one, the size of each grid item, I chose to face an old obstacle of mine, CSS Grid.
 
-## Building your project
+All I can say is that, for some reason, I had a stigma with CSS Grid and as far as I can remember, some of my implementations just *didn't work at all*. Maybe because I've tried using it for HTML tables, maybe because I was dealing with image grids (let's be real, images are painful to handle) or simply because I thought you needed to put the values for `grid-area` in braces. That being said, it worked way more neatly than I expected and with little interference from other margins or paddings.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```css
+.grid {
+  display: grid;
+  height: 100%;
+  padding: 6vh 22vw;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.2fr .3fr .5fr 1fr;
+  grid-template-areas: 
+    "cardG cardA cardA cardD"
+    "cardG cardB cardC cardD"
+    "cardH cardB cardC cardD"
+    "cardH cardF cardE cardE";
+}
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+/* ... */
 
-## Deploying your project
+.grid .item:nth-child(2) {
+  grid-area: cardB;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+```
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### Continued development
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Since I've barely have any experience with CSS Grid, I guess there is room for improvement in this matter. I still want to play more with properties such as `grid-template-columns` or `grid-template-rows` and its values, especially to make the items of the Bento grid more responsive and pixel-perfect.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Useful resources
 
-## Create a custom `README.md`
+- [How to Use Bento Grids Design in Your Web Projects (David Jaja, freeCodeCamp)](https://www.freecodecamp.org/news/bento-grids-in-web-design/) - An article which dives in depth about the usage of Bento Grid, from the design philosophy to the implementation via CSS Grid (that's what made me choose this approach).
+- [W3 Schools's CSS Reference](https://www.w3schools.com/cssref/index.php) - W3 Schools always with their amazing, reliable, easy-to-understand material helped me be more confident while using CSS Grid.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Author
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- GitHub - [Luiz Carlos Jr.](https://github.com/lucarl07)
+- Frontend Mentor - [@lucarl07](https://www.frontendmentor.io/profile/lucarl07)
