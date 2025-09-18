@@ -12,8 +12,8 @@
 
   /* Font sizes: */
   --regular: 18px;
-  --large: 26px;
-  --larger: 36px;
+  --large: 28px;
+  --larger: 34px;
   --x-large: 56px;
 }
 
@@ -45,7 +45,7 @@ body {
 .grid {
   display: grid;
   height: 100%;
-  padding: 6vh 23vw;
+  padding: 6vh 22vw;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1.2fr .3fr .5fr 1fr;
@@ -161,13 +161,13 @@ body {
   background-color: var(--white);
 }
 .grid .item:nth-child(6) .wrapper {
-  gap: 1.25rem;
+  gap: 1.75rem;
 }
 .grid .item:nth-child(6) .wrapper .large-text {
   font-size: var(--x-large);
 }
 .grid .item:nth-child(6) img {
-  width: 80%;
+  width: 85%;
 }
 
 .grid .item:nth-child(7) {
@@ -188,6 +188,9 @@ body {
 .grid .item:nth-child(8) .large-text {
   font-size: var(--larger);
 }
+.grid .item:nth-child(8) img {
+  width: 105%
+}
 
 .attribution {
   display: block;
@@ -199,11 +202,27 @@ body {
   color: hsl(228, 45%, 44%); 
 }
 
+@media screen and (max-width: 1440px) {
+  :root {
+    --large: 32px;
+    --larger: 38px;
+  }
+  .grid {
+    padding: 8vh 12vw;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .attribution {
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .grid {
+    padding: 6vh 6vw;
   }
 }
