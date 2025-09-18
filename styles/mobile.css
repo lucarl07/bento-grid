@@ -1,4 +1,104 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 720px) {
+  :root {
+    /* Font sizes: */
+    --regular: 18px;
+    --large: 24px;
+    --larger: 32px;
+    --x-large: 50px;
+  }
+
+  body {
+    height: auto;
+  }
+
+  .grid {
+    padding: 5vh 4vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 
+      0.8fr 0.4fr 0.6fr 1.2fr 
+      1fr 0.6fr 0.7fr 1fr;
+    grid-template-areas:
+      "cardA"
+      "cardB"
+      "cardC"
+      "cardD"
+      "cardE"
+      "cardF"
+      "cardG"
+      "cardH"
+  }
+
+  .grid .item:nth-child(1) {
+    .wrapper {
+      gap: .5rem;
+    }
+    img {
+      width: 65%;
+    }
+  }
+
+  .grid .item:nth-child(2) {
+    img {
+      width: 100%;
+    }
+  }
+
+  .grid .item:nth-child(3) {
+    justify-content: space-between;
+    img {
+      width: 75%;
+    }
+  }
+
+  .grid .item:nth-child(4) {
+    align-items: center;
+    gap: 2rem;
+    img {
+      width: 100%;
+    }
+    .small-text {
+      text-align: center;
+    }
+  }
+
+  .grid .item:nth-child(5) {
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+      width: 75%;
+    }
+    .large-text {
+      text-align: center;
+      width: 75%;
+    }
+  }
+
+  .grid .item:nth-child(6) {
+    padding: 1.5rem;
+    img {
+      width: 62%;
+    }
+  }
+
+  .grid .item:nth-child(7) {
+    justify-content: start;
+    padding: 2rem;
+    .large-text {
+      font-size: 28px;
+    }
+    img {
+      width: 65%;
+    }
+  }
+
+  .grid .item:nth-child(8) {
+    img {
+      width: 80%;
+    }
+  }
+
+  /* --- Styles below may be removed --- */
+
   .attribution {
     display: none;
     padding-bottom: 1rem;
