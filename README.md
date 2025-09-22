@@ -28,11 +28,11 @@ Users should be able to:
 
 - On Desktop:
 
-![Screenshot on desktop resolution](./preview/screenshot.png)
+![Screenshot on desktop resolution](./screenshots/desktop.png)
 
 - On Mobile:
 
-![Screenshot on mobile resolution](./preview/screenshot-mobile.png)
+![Screenshot on mobile resolution](./screenshots/mobile.png)
 
 ### Links
 
