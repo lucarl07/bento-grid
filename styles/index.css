@@ -5,9 +5,10 @@
 
   --yellow-100: hsl(31, 66%, 93%);
   --yellow-500: hsl(39, 100%, 71%);
-
+  
   --white: hsl(0, 0%, 100%);
   --whitesmoke: hsl(0, 0%, 96%);
+  --blue: hsl(228, 45%, 44%);
   --black: hsl(0, 0%, 7%);
 
   /* Font sizes: */
@@ -202,7 +203,7 @@ body {
   text-align: center; 
 }
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: var(--blue); 
 }
 
 @media screen and (max-width: 1440px) {
